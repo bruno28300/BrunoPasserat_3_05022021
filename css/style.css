@@ -1,8 +1,15 @@
 /* Définition des polices personnalisées */
 
 @font-face {
-    font-family: 'Raleway-Regular';
-    src: url('../fonts/Raleway-Regular.ttf') format('truetype');
+    font-family: 'Roboto-Regular';
+    src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Shrikhand-Regular';
+    src: url('../fonts/Roboto-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -16,7 +23,11 @@
 }
 
 body {
-    font-family: 'Raleway-Regular', sans-serif;
+    font-family: 'Roboto-Regular', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Shrikhand-Regular', sans-serif;
 }
 
 main {
