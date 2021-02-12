@@ -1,15 +1,8 @@
-/* Définition des polices personnalisées */
+/* Include fonts */
 
 @font-face {
-    font-family: 'Roboto-Regular';
-    src: url('../fonts/Roboto-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Shrikhand-Regular';
-    src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+    font-family: 'Raleway-Regular';
+    src: url('../fonts/Raleway-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -23,17 +16,26 @@
 }
 
 body {
-    font-family: 'Roboto-Regular', sans-serif;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Shrikhand-Regular', sans-serif;
+    font-family: 'Raleway-Regular', sans-serif;
 }
 
 main {
     display: block;
     max-width: 1170px;
     margin: auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+i {
+    width: 40px;
+}
+
+li {
+    line-height: 3rem;
 }
 
 /* HEADER */
@@ -43,7 +45,7 @@ header, .restaurants {
 }
 /* LOGO */
 
-.logo img {
+img.logo {
     width: 200px;
     margin: auto;
 }
@@ -59,27 +61,28 @@ header, .restaurants {
 
 footer {
     padding: 20px;
+    color: #ececec;
     background: #353535;
 }
 
 /* Small devices (landscape phones, 480px and up) */
 @media only screen and (min-width: 480px) {
-    ...
+    
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-    ...
+    
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    ...
+    
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    ...
+    
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
