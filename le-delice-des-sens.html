@@ -11,71 +11,75 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d404c7eebe.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/logo/favicon.gif">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/logo/favicon.gif">
 </head>
 
 <body>
     <header>
         <a href="index.html"><i class="fas fa-arrow-left"></i></a>
-        <img src="img/logo/ohmyfood-250.webp" alt="logo ohmyfood" class="logo" />
-        <img src="img/restaurants/le-delice-des-sens.webp" alt="La palette du goût à Paris">
+        <p class="logo-top">ohmyfood</p>
+        <img src="img/restaurants/le-delice-des-sens-1200w.webp" srcset="
+        img/restaurants/le-delice-des-sens-768w.webp 768w,
+        img/restaurants/le-delice-des-sens-640w.webp 640w,
+        img/restaurants/le-delice-des-sens-480w.webp 480w
+    " sizes="100vw" alt="Le délice des sens à Paris">
     </header>
 
     <main>
-        <h1>Le délice des sens<i class="far fa-heart"></i></h1>
+        <h1 class="heading-menu">Le délice des sens<i class="far fa-heart"></i></h1>
 
-        <section class="Entrées">
-            <h2>Entrées</h2>
+        <section class="starters">
+            <h2 class="heading-menu-sub">Entrées</h2>
 
-            <div class="plat">
+            <div class="dish">
                 <h3>Tartare de thon</h3>
                 <p>Assaisonné au yuzu<span>25€</span></p>
             </div>
 
-            <div class="plat">
+            <div class="dish">
                 <h3>Bouchée de homard croustillant</h3>
                 <p>Et sa farandole de petits légumes<span>35€</span></p>
             </div>
 
-            <div class="plat">
+            <div class="dish">
                 <h3>Velouté de cèpes</h3>
                 <p>Aux truffes<span>20€</span></p>
             </div>
         </section>
 
-        <section class="Plats">
-            <h2>Plats</h2>
+        <section class="dishes">
+            <h2 class="heading-menu-sub">Plats</h2>
 
-            <div class="plat">
+            <div class="dish">
                 <h3>Poulet rôti aux herbes de Provence</h3>
                 <p>Et sa crème de truffe<span>40€</span></p>
             </div>
 
-            <div class="plat">
+            <div class="dish">
                 <h3>Langouste rôtie</h3>
                 <p>Et ses légumes de saison<span>35€</span></p>
             </div>
 
-            <div class="plat">
+            <div class="dish">
                 <h3>Côte de bœuf Angus</h3>
                 <p>Et sa purée de panais<span>44€</span></p>
             </div>
         </section>
 
-        <section class="Desserts">
-            <h2>Desserts</h2>
+        <section class="desserts">
+            <h2 class="heading-menu-sub">Desserts</h2>
 
-            <div class="plat">
+            <div class="dish">
                 <h3>Farandole de desserts</h3>
                 <p>Du chef<span>18€</span></p>
             </div>
 
-            <div class="plat">
+            <div class="dish">
                 <h3>Crème brulée </h3>
                 <p>Revisitée<span>22€</span></p>
             </div>
 
-            <div class="plat">
+            <div class="dish">
                 <h3>Tiramisu </h3>
                 <p>À la noisette<span>23€</span></p>
             </div>
@@ -84,7 +88,7 @@
         <a href="#" class="btn">commander</a>
 
         <footer>
-            <img src="img/logo/ohmyfood-100-blanc.webp" alt="logo ohmyfood">
+            <p class="logo-bottom">ohmyfood</p>
             <nav>
                 <ul>
                     <li><i class="fas fa-utensils"></i>Proposer un restaurant</li>

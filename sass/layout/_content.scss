@@ -1,0 +1,51 @@
+.operation,
+.restaurants {
+  padding: $grid-gutter * 2;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  margin: $grid-gutter auto;
+  padding: $grid-gutter * 1.2;
+  font-weight: 500;
+  background: $color-gray;
+  border-radius: $border-rad;
+  @include shadow;
+  &:hover {
+    background: lighten($color-primary, 35);
+    & i {
+      color: $color-primary;
+    }
+  }
+  & i {
+    margin-top: 20px;
+    color: darken($color-gray, 50);
+  }
+}
+
+.cards {
+  position: relative;
+  margin: $grid-gutter * 4 auto;
+  background: $color-white;
+  border-radius: $border-rad/2;
+  & img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: 50% 60%;
+    border-radius: $border-rad/2 $border-rad/2 0 0;
+  }
+  & h3,
+  & p {
+    padding: 0 $grid-gutter * 2;
+  }
+  & i {
+    position: absolute;
+    bottom: $grid-gutter;
+    right: $grid-gutter;
+    &:hover {
+      background: linear-gradient(to bottom, $color-secondary, $color-primary);
+    }
+  }
+}

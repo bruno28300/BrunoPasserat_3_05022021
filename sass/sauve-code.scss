@@ -1,0 +1,45 @@
+/*   VARIABLES   */
+
+$border-rad: 2rem;
+$clr-btn: $color-secondary;
+.btn {
+    border-radius: $border-rad;
+    background-color: $clr-btn;
+    position: relative;
+    z-index: 1;
+    &:hover {
+        &::after {
+            opacity: 1;
+    }
+}
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: radial-gradient(circle, lighten($clr-btn, 5) 0%, darken($clr-btn, 10) 100%);
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 250ms;
+    }
+}
+/*   FONCTIONS   */
+
+
+/*   MIXINS   */
+
+
+$font-size: (logo:7rem,
+    quote: 6rem,
+    heading:5rem,
+    project-heading:4rem,
+    label:2rem);
+
+.quote {
+    font-size: map-get($font-size, quote);
+
+    @include mobile-only {
+        font-size: map-get($font-size, quote)*0.4;
+    }

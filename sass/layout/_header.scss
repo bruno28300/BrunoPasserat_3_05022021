@@ -1,0 +1,36 @@
+.header {
+  background: $color-gray;
+  text-align: center;
+  width: 100%;
+  &__logo {
+    color: $color-secondary;
+  }
+}
+
+.city {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  padding: 20px;
+  background: linear-gradient(
+    to bottom,
+    darken($color-gray, 15),
+    darken($color-gray, 3) 12%
+  );
+  & i {
+    margin-top: 20px;
+  }
+}
+
+.highlight {
+  margin: 50px;
+}
+
+.logo-top {
+  font-family: "Shrikhand", cursive;
+  font-weight: 900;
+  font-size: map-get($font-size, logo);
+  text-align: center;
+  background: $color-white;
+}

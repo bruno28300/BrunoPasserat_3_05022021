@@ -1,0 +1,29 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  // 10px div by def of 16px
+  font-size: 62.5%;
+}
+
+body {
+  background: $color-gray;
+}
+
+i {
+  height: 40px;
+  width: 40px;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+ul {
+  list-style-type: none;
+}

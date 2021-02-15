@@ -1,91 +1,138 @@
-/* Include fonts */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
 
-@font-face {
-    font-family: 'Raleway-Regular';
-    src: url('../fonts/Raleway-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-/* GENERAL */
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+html {
+  font-size: 62.5%; }
 
 body {
-    font-family: 'Raleway-Regular', sans-serif;
-}
-
-main {
-    display: block;
-    max-width: 1170px;
-    margin: auto;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
+  background: #f6f6f6; }
 
 i {
-    width: 40px;
-}
+  height: 40px;
+  width: 40px; }
 
-li {
-    line-height: 3rem;
-}
+ol {
+  list-style-type: decimal; }
 
-/* HEADER */
+ul {
+  list-style-type: none; }
 
-header, .restaurants {
-    background: #f6f6f6;
-}
-/* LOGO */
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  font-weight: 100;
+  line-height: 1.7; }
 
-img.logo {
-    width: 200px;
-    margin: auto;
-}
-/* FONCTIONNEMENT */
+.heading-home {
+  font-weight: 600;
+  font-size: 5rem; }
 
-/* RESTAURANTS */
+.logo-bottom {
+  font-family: "Shrikhand", cursive;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 2.75rem; }
 
-.cartes {
-    border-radius: 20px;
-}
+.operation {
+  background: #fff; }
 
-/* FOOTER */
+a {
+  color: #444444;
+  text-decoration: none; }
+
+.btn {
+  margin: 50px auto;
+  padding: 1.925rem 3.5rem;
+  font-size: 4rem;
+  color: #fff;
+  background: linear-gradient(to bottom, #ff79da, #9356dc);
+  box-shadow: 0.275rem 0.55rem 0.55rem #dddddd;
+  border: none;
+  border-radius: 4rem;
+  cursor: pointer; }
+  .btn:hover {
+    background: #9356dc;
+    color: #99e2d0; }
+  .btn--full-width {
+    width: 100%;
+    margin: 0 auto; }
+
+.header {
+  background: #f6f6f6;
+  text-align: center;
+  width: 100%; }
+  .header__logo {
+    color: #ff79da; }
+
+.city {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  padding: 20px;
+  background: linear-gradient(to bottom, #d0d0d0, #eeeeee 12%); }
+  .city i {
+    margin-top: 20px; }
+
+.highlight {
+  margin: 50px; }
+
+.logo-top {
+  font-family: "Shrikhand", cursive;
+  font-weight: 900;
+  font-size: 4rem;
+  text-align: center;
+  background: #fff; }
 
 footer {
-    padding: 20px;
-    color: #ececec;
-    background: #353535;
-}
+  padding: 40px;
+  font-weight: 400;
+  color: #fff;
+  background-color: #444444; }
 
-/* Small devices (landscape phones, 480px and up) */
-@media only screen and (min-width: 480px) {
-    
-}
+.operation,
+.restaurants {
+  padding: 3.5rem; }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-    
-}
+.step {
+  display: flex;
+  align-items: center;
+  margin: 1.75rem auto;
+  padding: 2.1rem;
+  font-weight: 500;
+  background: #f6f6f6;
+  border-radius: 4rem;
+  box-shadow: 0.275rem 0.55rem 0.55rem #dddddd; }
+  .step:hover {
+    background: #f2eafb; }
+    .step:hover i {
+      color: #9356dc; }
+  .step i {
+    margin-top: 20px;
+    color: #777777; }
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-    
-}
+.cards {
+  position: relative;
+  margin: 7rem auto;
+  background: #fff;
+  border-radius: 2rem; }
+  .cards img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: 50% 60%;
+    border-radius: 2rem 2rem 0 0; }
+  .cards h3, .cards p {
+    padding: 0 3.5rem; }
+  .cards i {
+    position: absolute;
+    bottom: 1.75rem;
+    right: 1.75rem; }
+    .cards i:hover {
+      background: linear-gradient(to bottom, #ff79da, #9356dc); }
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-    
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-    ...
-}
+/*# sourceMappingURL=style.css.map */

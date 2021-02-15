@@ -11,69 +11,83 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d404c7eebe.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/logo/favicon.gif">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/logo/favicon.gif">
 </head>
 
 <body>
     <main>
         <header>
-            <img src="img/logo/ohmyfood-250.webp" alt="logo ohmyfood" class="logo" />
-            <div class="entete">
-                <p class="ville"><i class="fas fa-map-marker-alt"></i>Paris, Belleville</p>
-                <h1>Réservez le menu qui vous convient</h1>
-                <p class="presentation">Découvrez des restaurants d'exeption, séléctionnés par nos soins</p>
-                <button class="btn">Explorer nos restaurants</button>
+            <div class="logo-top">ohmyfood</div>
+            <div class="header">
+                <p class="city"><i class="fas fa-map-marker-alt"></i>Paris, Belleville</p>
+                <div class="highlight">
+                    <h1 class="heading-home">Réservez le menu qui vous convient</h1>
+                    <p class="presentation">Découvrez des restaurants d'exeption, séléctionnés par nos soins</p>
+                    <button class="btn">Explorer nos restaurants</button>
+                </div>
             </div>
         </header>
 
-        <section class="fonctionnement">
-            <h2>Fonctionnement</h2>
+        <section class="operation">
+            <h2 class="heading-home-sub">Fonctionnement</h2>
             <nav>
-                <ul>
-                    <li><i class="fas fa-mobile-alt"></i>Choisissez un restaurant</li>
-                    <li><i class="fas fa-list-ul"></i>Composez votre menu</li>
-                    <li><i class="fas fa-store"></i>Dégustez au restaurant</li>
-                </ul>
+                <ol>
+                    <li class="step"><i class="fas fa-mobile-alt"></i>Choisissez un restaurant</li>
+                    <li class="step"><i class="fas fa-list-ul"></i>Composez votre menu</li>
+                    <li class="step"><i class="fas fa-store"></i>Dégustez au restaurant</li>
+                </ol>
             </nav>
         </section>
 
         <section class="restaurants">
-            <h2>Restaurants</h2>
+            <h2 class="heading-home-sub">Restaurants</h2>
             <a href="la-palette-du-gout.html">
-                <div class="cartes">
-                    <img src="img/restaurants/la-palette-du-gout-1200.webp" srcset="
-                                img/restaurants/la-palette-du-gout-768.webp 768w,
-                                img/restaurants/la-palette-du-gout-640.webp 640w,
-                                img/restaurants/la-palette-du-gout-480.webp 480w
+                <div class="cards">
+                    <img src="img/restaurants/la-palette-du-gout-1200w.webp" srcset="
+                                img/restaurants/la-palette-du-gout-768w.webp 768w,
+                                img/restaurants/la-palette-du-gout-640w.webp 640w,
+                                img/restaurants/la-palette-du-gout-480w.webp 480w
                             " sizes="100vw" alt="La palette du goût à Paris">
                     <h3>La palette du goût</h3>
-                    <p class="lieu">Ménilmontant</p>
+                    <p class="place">Ménilmontant</p>
                     <i class="far fa-heart"></i>
                 </div>
             </a>
             <a href="la-note-enchantee.html">
-                <div class="cartes">
-                    <img src="img/restaurants/la-note-enchantee-1200w.webp" alt="La note enchantée à Paris">
+                <div class="cards">
+                    <img src="img/restaurants/la-note-enchantee-1200w.webp" srcset="
+                                img/restaurants/la-note-enchantee-768w.webp 768w,
+                                img/restaurants/la-note-enchantee-640w.webp 640w,
+                                img/restaurants/la-note-enchantee-480w.webp 480w
+                            " sizes="100vw" alt="La note enchantée à Paris">
                     <h3>La note enchantée</h3>
-                    <p class="lieu">Charonne</p>
+                    <p class="place">Charonne</p>
                     <i class="far fa-heart"></i>
                 </div>
             </a>
 
             <a href="a-la-francaise.html">
-                <div class="cartes">
-                    <img src="img/restaurants/a-la-francaise-1200w.webp" alt="À la française à Paris">
+                <div class="cards">
+                    <img src="img/restaurants/a-la-francaise-1200w.webp" srcset="
+                                img/restaurants/a-la-francaise-768w.webp 768w,
+                                img/restaurants/a-la-francaise-640w.webp 640w,
+                                img/restaurants/a-la-francaise-480w.webp 480w
+                            " sizes="100vw" alt="À la française à Paris">
                     <h3>À la française</h3>
-                    <p class="lieu">Cité Rouge</p>
+                    <p class="place">Cité Rouge</p>
                     <i class="far fa-heart"></i>
                 </div>
             </a>
 
             <a href="le-delice-des-sens.html">
-                <div class="cartes">
-                    <img src="img/restaurants/le-delice-des-sens-1200w.webp" alt="Le délice des sens à Paris">
+                <div class="cards">
+                    <img src="img/restaurants/le-delice-des-sens-1200w.webp" srcset="
+                                img/restaurants/le-delice-des-sens-768w.webp 768w,
+                                img/restaurants/le-delice-des-sens-640w.webp 640w,
+                                img/restaurants/le-delice-des-sens-480w.webp 480w
+                            " sizes="100vw" alt="Le délice des sens à Paris">
                     <h3>Le délice des sens</h3>
-                    <p class="lieu">Folie-Méricourt</p>
+                    <p class="place">Folie-Méricourt</p>
                     <i class="far fa-heart"></i>
                 </div>
             </a>
@@ -81,7 +95,7 @@
         </section>
 
         <footer>
-            <img src="img/logo/ohmyfood-100-blanc.webp" alt="logo ohmyfood">
+            <p class="logo-bottom">ohmyfood</p>
             <nav>
                 <ul>
                     <li><i class="fas fa-utensils"></i>Proposer un restaurant</li>
