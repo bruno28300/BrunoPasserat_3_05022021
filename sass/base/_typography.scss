@@ -1,20 +1,60 @@
 body {
   font-family: "Roboto", sans-serif;
-  font-size: 2rem;
-  font-weight: 100;
-  line-height: 1.7;
+  font-size: $size/2;
+  line-height: $size/2;
 }
 
 .heading-home {
-  font-weight: 600;
-  font-size: map-get($font-size, heading);
+  margin-bottom: $size;
+  font-weight: $font-weight + 200;
+  font-size: $font-size * 0.75;
+}
+
+.heading-home-sub,
+.heading-menu {
+  @media (min-width: 480px) {
+    text-align: center;
+  }
+}
+
+.heading-menu {
+  position: relative;
+  font-family: "Shrikhand", cursive;
+  font-size: $font-size * 0.6;
+  & .fa-heart {
+    position: absolute;
+    top: $size * 0.25;
+    right: 0;
+  }
+}
+
+.heading-menu-sub {
+  position: relative;
+  margin-top: $size * 2;
+  padding-bottom: $size/2;
+  font-size: $font-size/2;
+  font-weight: $font-weight;
+  color: darken($color-white, 70);
+  text-transform: uppercase;
+  &:after {
+    content: "";
+    position: absolute;
+    height: $size/8;
+    width: $size * 1.2;
+    bottom: 0;
+    left: 0;
+    background: $color-tertiary;
+  }
+}
+
+h3 {
+  font-size: $font-size/3;
 }
 
 .logo-bottom {
   font-family: "Shrikhand", cursive;
-  font-weight: 900;
   font-style: italic;
-  font-size: 2.75rem;
+  font-size: $size * 0.75;
 }
 
 .operation {
@@ -22,6 +62,6 @@ body {
 }
 
 a {
-  color: darken($color-gray, 70);
+  color: darken($color-white, 70);
   text-decoration: none;
 }

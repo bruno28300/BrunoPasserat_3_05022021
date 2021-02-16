@@ -12,16 +12,11 @@ html {
 }
 
 body {
-  background: $color-gray;
+  background: darken($color-white, 4);
 }
 
 i {
-  height: 40px;
-  width: 40px;
-}
-
-ol {
-  list-style-type: decimal;
+  width: $size * 0.75;
 }
 
 ul {

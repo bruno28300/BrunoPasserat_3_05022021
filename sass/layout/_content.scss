@@ -1,17 +1,33 @@
 .operation,
 .restaurants {
-  padding: $grid-gutter * 2;
+  padding: $size;
+}
+
+.operation ul {
+  max-width: 400px;
+  margin: auto;
+}
+
+.restaurants-wrap {
+  margin: auto;
+  @media (min-width: 480px) {
+    max-width: 600px;
+  }
 }
 
 .step {
-  display: flex;
-  align-items: center;
-  margin: $grid-gutter auto;
-  padding: $grid-gutter * 1.2;
-  font-weight: 500;
-  background: $color-gray;
-  border-radius: $border-rad;
+  position: relative;
+  margin: $size auto;
+  padding: $size/2 $size;
+  font-size: $size/2.8;
+  font-weight: $font-weight + 100;
+  background: darken($color-white, 4);
+  border-radius: $border-rad/2;
   @include shadow;
+  @media (min-width: 480px) {
+    padding: $size/2 $size * 1.2;
+    font-size: $font-size/2;
+  }
   &:hover {
     background: lighten($color-primary, 35);
     & i {
@@ -19,33 +35,83 @@
     }
   }
   & i {
-    margin-top: 20px;
-    color: darken($color-gray, 50);
+    margin-top: $size/2;
+    color: darken($color-white, 50);
+  }
+  & span {
+    position: absolute;
+    display: inline-block;
+    height: $size;
+    width: $size;
+    color: $color-white;
+    border-radius: $border-rad;
+    background: $color-primary;
+    text-align: center;
+    top: $size * 0.75;
+    left: -$size * 0.375;
   }
 }
 
 .cards {
   position: relative;
-  margin: $grid-gutter * 4 auto;
+  margin: $size auto;
   background: $color-white;
   border-radius: $border-rad/2;
+  @include shadow;
   & img {
     width: 100%;
-    height: 200px;
+    height: $size * 4;
     object-fit: cover;
     object-position: 50% 60%;
     border-radius: $border-rad/2 $border-rad/2 0 0;
   }
   & h3,
   & p {
-    padding: 0 $grid-gutter * 2;
+    padding: 0 $size/2;
+    font-size: $font-size/3;
   }
   & i {
     position: absolute;
-    bottom: $grid-gutter;
-    right: $grid-gutter;
+    bottom: $size * 0.4;
+    right: $size/2;
+    font-size: $font-size * 0.5;
     &:hover {
       background: linear-gradient(to bottom, $color-secondary, $color-primary);
     }
+  }
+}
+
+.restaurant {
+  padding: $size;
+  border-radius: $border-rad $border-rad 0 0;
+}
+
+.dish {
+  position: relative;
+  max-width: 600px;
+  margin: $size auto 0;
+  padding: $size/3 $size/2;
+  background: $color-white;
+  border-radius: $border-rad/2;
+  @include shadow;
+  & p {
+    padding: 0;
+    font-size: $font-size/3;
+  }
+  & span {
+    position: absolute;
+    display: block;
+    right: $size/2;
+    bottom: $size/2;
+    font-size: $font-size/3;
+    font-weight: $font-weight + 200;
+  }
+}
+
+.order {
+  max-width: 200px;
+  margin-bottom: $size * 3;
+  & a {
+    color: $color-white;
   }
 }

@@ -1,6 +1,10 @@
 footer {
-  padding: 40px;
-  font-weight: 400;
+  padding: $size;
+  line-height: $size;
   color: $color-white;
-  background-color: darken($color-gray, 70);
+  background-color: darken($color-white, 70);
+}
+
+.logo-bottom {
+  margin-bottom: $size/2;
 }

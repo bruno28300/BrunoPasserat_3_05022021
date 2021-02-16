@@ -1,18 +1,17 @@
-$font-size: (
-  logo: 4rem,
-  quote: 6rem,
-  heading: 5rem,
-  project-heading: 4rem,
-  label: 2rem,
-);
+$size: 4rem;
+$font-size: 4rem;
+$font-weight: 400;
 
 $color-primary: #9356dc;
 $color-secondary: #ff79da;
 $color-tertiary: #99e2d0;
 $color-white: #fff;
-$color-gray: #f6f6f6;
 
 $border-rad: 4rem;
+
+$shadow-size: 0.55rem;
+$layout-margin: 7rem;
+$grid-gutter: $layout-margin * 0.25;
 
 $breakpoints: (
   landscape-phones: 480px,
@@ -21,7 +20,3 @@ $breakpoints: (
   desktops: 992px,
   large-desktops: 1200px,
 );
-
-$shadow-size: 0.55rem;
-$layout-margin: 7rem;
-$grid-gutter: $layout-margin * 0.25;

@@ -1,7 +1,25 @@
-.header {
-  background: $color-gray;
+.logo-top {
+  position: relative;
+  font-family: "Shrikhand", cursive;
+  font-weight: $font-weight + 400;
+  font-size: $font-size;
   text-align: center;
+  line-height: $size * 2.5;
+  background: $color-white;
+}
+
+.fa-arrow-left {
+  position: absolute;
+  top: $size * 0.85;
+  left: $size/2;
+  font-size: $font-size * 0.75;
+  color: darken($color-white, 50);
+}
+
+.header {
   width: 100%;
+  text-align: center;
+  background: darken($color-white, 4);
   &__logo {
     color: $color-secondary;
   }
@@ -11,26 +29,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: 500;
-  padding: 20px;
+  font-weight: $font-weight + 100;
+  padding: $size/2;
   background: linear-gradient(
     to bottom,
-    darken($color-gray, 15),
-    darken($color-gray, 3) 12%
+    darken($color-white, 18),
+    darken($color-white, 7) 12%
   );
   & i {
-    margin-top: 20px;
+    margin-top: $size/2;
   }
 }
 
 .highlight {
-  margin: 50px;
-}
-
-.logo-top {
-  font-family: "Shrikhand", cursive;
-  font-weight: 900;
-  font-size: map-get($font-size, logo);
-  text-align: center;
-  background: $color-white;
+  margin: $size;
 }

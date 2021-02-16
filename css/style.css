@@ -9,14 +9,10 @@ html {
   font-size: 62.5%; }
 
 body {
-  background: #f6f6f6; }
+  background: whitesmoke; }
 
 i {
-  height: 40px;
-  width: 40px; }
-
-ol {
-  list-style-type: decimal; }
+  width: 3rem; }
 
 ul {
   list-style-type: none; }
@@ -24,47 +20,96 @@ ul {
 body {
   font-family: "Roboto", sans-serif;
   font-size: 2rem;
-  font-weight: 100;
-  line-height: 1.7; }
+  line-height: 2rem; }
 
 .heading-home {
+  margin-bottom: 4rem;
   font-weight: 600;
-  font-size: 5rem; }
+  font-size: 3rem; }
+
+@media (min-width: 480px) {
+  .heading-home-sub,
+  .heading-menu {
+    text-align: center; } }
+
+.heading-menu {
+  position: relative;
+  font-family: "Shrikhand", cursive;
+  font-size: 2.4rem; }
+  .heading-menu .fa-heart {
+    position: absolute;
+    top: 1rem;
+    right: 0; }
+
+.heading-menu-sub {
+  position: relative;
+  margin-top: 8rem;
+  padding-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #4d4d4d;
+  text-transform: uppercase; }
+  .heading-menu-sub:after {
+    content: "";
+    position: absolute;
+    height: 0.5rem;
+    width: 4.8rem;
+    bottom: 0;
+    left: 0;
+    background: #99e2d0; }
+
+h3 {
+  font-size: 1.3333333333rem; }
 
 .logo-bottom {
   font-family: "Shrikhand", cursive;
-  font-weight: 900;
   font-style: italic;
-  font-size: 2.75rem; }
+  font-size: 3rem; }
 
 .operation {
   background: #fff; }
 
 a {
-  color: #444444;
+  color: #4d4d4d;
   text-decoration: none; }
 
 .btn {
-  margin: 50px auto;
-  padding: 1.925rem 3.5rem;
-  font-size: 4rem;
+  max-width: 450px;
+  margin: 4rem auto;
+  padding: 2rem 3rem;
+  text-align: center;
+  font-size: 2rem;
   color: #fff;
   background: linear-gradient(to bottom, #ff79da, #9356dc);
-  box-shadow: 0.275rem 0.55rem 0.55rem #dddddd;
+  box-shadow: 0.275rem 0.55rem 0.55rem #e6e6e6;
   border: none;
   border-radius: 4rem;
-  cursor: pointer; }
+  cursor: pointer;
+  transition: background-color 250ms; }
   .btn:hover {
     background: #9356dc;
     color: #99e2d0; }
-  .btn--full-width {
-    width: 100%;
-    margin: 0 auto; }
+
+.logo-top {
+  position: relative;
+  font-family: "Shrikhand", cursive;
+  font-weight: 800;
+  font-size: 4rem;
+  text-align: center;
+  line-height: 10rem;
+  background: #fff; }
+
+.fa-arrow-left {
+  position: absolute;
+  top: 3.4rem;
+  left: 2rem;
+  font-size: 3rem;
+  color: gray; }
 
 .header {
-  background: #f6f6f6;
+  width: 100%;
   text-align: center;
-  width: 100%; }
+  background: whitesmoke; }
   .header__logo {
     color: #ff79da; }
 
@@ -73,66 +118,119 @@ a {
   justify-content: center;
   align-items: center;
   font-weight: 500;
-  padding: 20px;
-  background: linear-gradient(to bottom, #d0d0d0, #eeeeee 12%); }
+  padding: 2rem;
+  background: linear-gradient(to bottom, #d1d1d1, #ededed 12%); }
   .city i {
-    margin-top: 20px; }
+    margin-top: 2rem; }
 
 .highlight {
-  margin: 50px; }
-
-.logo-top {
-  font-family: "Shrikhand", cursive;
-  font-weight: 900;
-  font-size: 4rem;
-  text-align: center;
-  background: #fff; }
+  margin: 4rem; }
 
 footer {
-  padding: 40px;
-  font-weight: 400;
+  padding: 4rem;
+  line-height: 4rem;
   color: #fff;
-  background-color: #444444; }
+  background-color: #4d4d4d; }
+
+.logo-bottom {
+  margin-bottom: 2rem; }
 
 .operation,
 .restaurants {
-  padding: 3.5rem; }
+  padding: 4rem; }
+
+.operation ul {
+  max-width: 400px;
+  margin: auto; }
+
+.restaurants-wrap {
+  margin: auto; }
+  @media (min-width: 480px) {
+    .restaurants-wrap {
+      max-width: 600px; } }
 
 .step {
-  display: flex;
-  align-items: center;
-  margin: 1.75rem auto;
-  padding: 2.1rem;
+  position: relative;
+  margin: 4rem auto;
+  padding: 2rem 4rem;
+  font-size: 1.4285714286rem;
   font-weight: 500;
-  background: #f6f6f6;
-  border-radius: 4rem;
-  box-shadow: 0.275rem 0.55rem 0.55rem #dddddd; }
+  background: whitesmoke;
+  border-radius: 2rem;
+  box-shadow: 0.275rem 0.55rem 0.55rem #e6e6e6; }
+  @media (min-width: 480px) {
+    .step {
+      padding: 2rem 4.8rem;
+      font-size: 2rem; } }
   .step:hover {
     background: #f2eafb; }
     .step:hover i {
       color: #9356dc; }
   .step i {
-    margin-top: 20px;
-    color: #777777; }
+    margin-top: 2rem;
+    color: gray; }
+  .step span {
+    position: absolute;
+    display: inline-block;
+    height: 4rem;
+    width: 4rem;
+    color: #fff;
+    border-radius: 4rem;
+    background: #9356dc;
+    text-align: center;
+    top: 3rem;
+    left: -1.5rem; }
 
 .cards {
   position: relative;
-  margin: 7rem auto;
+  margin: 4rem auto;
   background: #fff;
-  border-radius: 2rem; }
+  border-radius: 2rem;
+  box-shadow: 0.275rem 0.55rem 0.55rem #e6e6e6; }
   .cards img {
     width: 100%;
-    height: 200px;
+    height: 16rem;
     object-fit: cover;
     object-position: 50% 60%;
     border-radius: 2rem 2rem 0 0; }
   .cards h3, .cards p {
-    padding: 0 3.5rem; }
+    padding: 0 2rem;
+    font-size: 1.3333333333rem; }
   .cards i {
     position: absolute;
-    bottom: 1.75rem;
-    right: 1.75rem; }
+    bottom: 1.6rem;
+    right: 2rem;
+    font-size: 2rem; }
     .cards i:hover {
       background: linear-gradient(to bottom, #ff79da, #9356dc); }
+
+.restaurant {
+  padding: 4rem;
+  border-radius: 4rem 4rem 0 0; }
+
+.dish {
+  position: relative;
+  max-width: 600px;
+  margin: 4rem auto 0;
+  padding: 1.3333333333rem 2rem;
+  background: #fff;
+  border-radius: 2rem;
+  box-shadow: 0.275rem 0.55rem 0.55rem #e6e6e6; }
+  .dish p {
+    padding: 0;
+    font-size: 1.3333333333rem; }
+  .dish span {
+    position: absolute;
+    display: block;
+    right: 2rem;
+    bottom: 2rem;
+    font-size: 1.3333333333rem;
+    font-weight: 600; }
+
+.order {
+  max-width: 200px;
+  margin-bottom: 12rem; }
+  .order a {
+    color: #fff; }
 
 /*# sourceMappingURL=style.css.map */
