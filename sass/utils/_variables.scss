@@ -7,7 +7,11 @@ $color-secondary: #ff79da;
 $color-tertiary: #99e2d0;
 $color-white: #fff;
 
+$linear-gradient: linear-gradient(to bottom, $color-secondary, $color-primary);
+
 $border-rad: 4rem;
+
+$box-shadow: $size $size $size darken($color-white, 10);
 
 $shadow-size: 0.55rem;
 $layout-margin: 7rem;

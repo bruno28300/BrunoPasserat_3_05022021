@@ -1,3 +1,21 @@
+@keyframes progress-bar {
+  0% {
+    transform: scaleX(0); }
+  17% {
+    transform: scaleX(0.18); }
+  24% {
+    transform: scaleX(0.4);
+    animation-timing-function: cubic-bezier(0.9, 0, 0.1, 1); }
+  46% {
+    transform: scaleX(0.81);
+    animation-timing-function: cubic-bezier(0.25, 0.25, 1); }
+  100% {
+    transform: scaleX(1); } }
+@keyframes site {
+  0% {
+    transform: translateY(9999px); }
+  100% {
+    transform: translateX(0); } }
 *,
 *::after,
 *::before {
@@ -16,6 +34,33 @@ i {
 
 ul {
   list-style-type: none; }
+
+.loading {
+  margin: 40rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column-reverse;
+  z-index: -1; }
+
+.loading .progress {
+  width: 50vw;
+  height: 3vw; }
+
+.loading .progress-bar {
+  background: linear-gradient(to right, #9356dc, #ff79da, #99e2d0);
+  height: 100%;
+  transform-origin: left;
+  transform: scaleX(0.5);
+  animation: progress-bar 3000ms 150ms both; }
+
+.main-accueil {
+  animation: site 500ms 3100ms both;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 1; }
 
 body {
   font-family: "Roboto", sans-serif;
@@ -74,6 +119,7 @@ a {
   text-decoration: none; }
 
 .btn {
+  position: relative;
   max-width: 450px;
   margin: 4rem auto;
   padding: 2rem 3rem;
@@ -81,14 +127,30 @@ a {
   font-size: 2rem;
   color: #fff;
   background: linear-gradient(to bottom, #ff79da, #9356dc);
-  box-shadow: 0.275rem 0.55rem 0.55rem #e6e6e6;
+  box-shadow: 2rem 2rem 4rem #b3b3b3;
   border: none;
   border-radius: 4rem;
   cursor: pointer;
-  transition: background-color 250ms; }
-  .btn:hover {
-    background: #9356dc;
-    color: #99e2d0; }
+  z-index: 1; }
+  .btn:hover::after {
+    opacity: 1;
+    border-radius: 4rem; }
+  .btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to bottom, #ff93e1, #a16be0);
+    box-shadow: 2rem 2rem 4rem #a6a6a6;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 1s;
+    border-radius: 4rem; }
+
+.loading-spinner {
+  animation: loading-spinner 3s; }
 
 .logo-top {
   position: relative;
@@ -110,18 +172,16 @@ a {
   width: 100%;
   text-align: center;
   background: whitesmoke; }
-  .header__logo {
-    color: #ff79da; }
 
 .city {
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: 500;
-  padding: 2rem;
+  padding: 4rem;
   background: linear-gradient(to bottom, #d1d1d1, #ededed 12%); }
   .city i {
-    margin-top: 2rem; }
+    margin-right: 4rem; }
 
 .highlight {
   margin: 4rem; }
@@ -151,13 +211,15 @@ footer {
 
 .step {
   position: relative;
+  display: flex;
+  align-items: center;
+  height: 4rem;
   margin: 4rem auto;
-  padding: 2rem 4rem;
   font-size: 1.4285714286rem;
   font-weight: 500;
-  background: whitesmoke;
+  background: #ededed;
   border-radius: 2rem;
-  box-shadow: 0.275rem 0.55rem 0.55rem #e6e6e6; }
+  box-shadow: 2rem 2rem 4rem #cccccc; }
   @media (min-width: 480px) {
     .step {
       padding: 2rem 4.8rem;
@@ -167,18 +229,19 @@ footer {
     .step:hover i {
       color: #9356dc; }
   .step i {
-    margin-top: 2rem;
     color: gray; }
   .step span {
     position: absolute;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 4rem;
     width: 4rem;
     color: #fff;
     border-radius: 4rem;
     background: #9356dc;
     text-align: center;
-    top: 3rem;
+    top: 2rem;
     left: -1.5rem; }
 
 .cards {
@@ -186,13 +249,21 @@ footer {
   margin: 4rem auto;
   background: #fff;
   border-radius: 2rem;
-  box-shadow: 0.275rem 0.55rem 0.55rem #e6e6e6; }
+  box-shadow: 2rem 2rem 4rem #cccccc; }
   .cards img {
     width: 100%;
     height: 16rem;
     object-fit: cover;
     object-position: 50% 60%;
     border-radius: 2rem 2rem 0 0; }
+  .cards .tag {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    padding: 1rem;
+    font-weight: 500;
+    color: #278870;
+    background: #99e2d0; }
   .cards h3, .cards p {
     padding: 0 2rem;
     font-size: 1.3333333333rem; }
@@ -208,6 +279,12 @@ footer {
   padding: 4rem;
   border-radius: 4rem 4rem 0 0; }
 
+.starters,
+.dishes,
+.desserts {
+  max-width: 600px;
+  margin: auto; }
+
 .dish {
   position: relative;
   max-width: 600px;
@@ -215,7 +292,7 @@ footer {
   padding: 1.3333333333rem 2rem;
   background: #fff;
   border-radius: 2rem;
-  box-shadow: 0.275rem 0.55rem 0.55rem #e6e6e6; }
+  box-shadow: 2rem 2rem 4rem #cccccc; }
   .dish p {
     padding: 0;
     font-size: 1.3333333333rem; }
@@ -226,6 +303,10 @@ footer {
     bottom: 2rem;
     font-size: 1.3333333333rem;
     font-weight: 600; }
+  .dish:hover {
+    background: #99e2d0;
+    margin-right: 4rem;
+    transition: margin-right 2s ease-in-out; }
 
 .order {
   max-width: 200px;

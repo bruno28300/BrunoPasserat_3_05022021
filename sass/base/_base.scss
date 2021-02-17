@@ -22,3 +22,34 @@ i {
 ul {
   list-style-type: none;
 }
+
+.loading {
+  margin: $size * 10 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column-reverse;
+  z-index: -1;
+}
+
+.loading .progress {
+  width: 50vw;
+  height: 3vw;
+}
+
+.loading .progress-bar {
+  background: linear-gradient(to right, #9356dc, #ff79da, #99e2d0);
+  height: 100%;
+  transform-origin: left;
+  transform: scaleX(0.5);
+  animation: progress-bar 3000ms 150ms both;
+}
+
+.main-accueil {
+  animation: site 500ms 3100ms both;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
