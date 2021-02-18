@@ -5,6 +5,16 @@ footer {
   background-color: darken($color-white, 70);
 }
 
+.footer {
+  position: relative;
+  top: -$size * 2;
+}
+
+.footer-sub {
+  max-width: 1170px;
+  margin: auto;
+}
+
 .logo-bottom {
   margin-bottom: $size/2;
 }

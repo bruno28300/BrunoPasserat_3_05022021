@@ -38,11 +38,17 @@ ul {
 }
 
 .loading .progress-bar {
-  background: linear-gradient(to right, #9356dc, #ff79da, #99e2d0);
+  background: linear-gradient(
+    to right,
+    $color-primary,
+    $color-secondary,
+    $color-tertiary
+  );
   height: 100%;
   transform-origin: left;
   transform: scaleX(0.5);
   animation: progress-bar 3000ms 150ms both;
+  animation-fill-mode: both;
 }
 
 .main-accueil {

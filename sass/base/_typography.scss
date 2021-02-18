@@ -10,8 +10,7 @@ body {
   font-size: $font-size * 0.75;
 }
 
-.heading-home-sub,
-.heading-menu {
+.heading-home-sub {
   @media (min-width: 480px) {
     text-align: center;
   }
@@ -19,12 +18,22 @@ body {
 
 .heading-menu {
   position: relative;
+  margin-top: $size;
   font-family: "Shrikhand", cursive;
   font-size: $font-size * 0.6;
   & .fa-heart {
     position: absolute;
-    top: $size * 0.25;
+    top: 0;
     right: 0;
+    display: block;
+    &:hover {
+      color: transparent;
+      background: $color-primary;
+      transition: background 1000ms ease-in-out;
+    }
+  }
+  @media (min-width: 480px) {
+    font-size: $font-size;
   }
 }
 
