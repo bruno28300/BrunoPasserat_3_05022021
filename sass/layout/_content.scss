@@ -4,14 +4,14 @@
 }
 
 .operation ul {
-  max-width: 400px;
+  max-width: $size * 10;
   margin: auto;
 }
 
 .restaurants-wrap {
   margin: auto;
   @media (min-width: 480px) {
-    max-width: 600px;
+    max-width: $size * 12;
   }
 }
 
@@ -94,47 +94,81 @@
 }
 
 .restaurant {
+  position: relative;
+  top: -$size * 2;
+  max-width: 1170px;
+  margin: auto;
   padding: $size;
+  background: $color-white;
   border-radius: $border-rad $border-rad 0 0;
 }
 
-.starters,
-.dishes,
-.desserts {
-  max-width: 600px;
+.restaurant-wrap {
+  max-width: $size * 12;
   margin: auto;
+}
+
+.dish-bg {
+  position: relative;
+  max-width: $size * 12;
+  background: $color-tertiary;
+  border-radius: $border-rad/2;
+  box-shadow: $size/2 $size/2 $size darken($color-white, 20);
+}
+
+.fa-check {
+  position: absolute;
+  top: $size/2;
+  right: $size/2;
+  padding: $size/4 $size/6;
+  text-align: center;
+  color: #99e2d0;
+  background: white;
+  border-radius: 50%;
+  transform: rotate(360deg);
+  animation: check 1000ms 150ms both;
 }
 
 .dish {
   position: relative;
-  max-width: 600px;
   margin: $size auto 0;
-  padding: $size/3 $size/2;
+  padding: $size/2;
+  white-space: nowrap;
   background: $color-white;
   border-radius: $border-rad/2;
-  box-shadow: $size/2 $size/2 $size darken($color-white, 20);
+  box-shadow: $size/4 $size/4 $size darken($color-white, 20);
+  & h3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
   & p {
     padding: 0;
     font-size: $font-size/3;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   & span {
-    position: absolute;
-    display: block;
-    right: $size/2;
-    bottom: $size/2;
     font-size: $font-size/3;
     font-weight: $font-weight + 200;
   }
   &:hover {
-    background: $color-tertiary;
-    margin-right: $size;
-    transition: margin-right 2s ease-in-out;
+    margin-right: $size * 2;
+    border-radius: $border-rad/2 0 0 $border-rad/2;
+    transition: margin-right 300ms ease-in-out;
+    box-shadow: 0 $size/2 $size darken($color-white, 20);
   }
+}
+
+.menu-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 }
 
 .order {
   max-width: 200px;
-  margin-bottom: $size * 3;
+  margin: $size * 2 auto;
   & a {
     color: $color-white;
   }
