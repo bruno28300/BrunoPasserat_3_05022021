@@ -10,21 +10,17 @@
   0% {
     transform: scaleX(0);
   }
-
   17% {
     transform: scaleX(0.18);
   }
-
   24% {
     transform: scaleX(0.4);
     animation-timing-function: cubic-bezier(0.9, 0, 0.1, 1);
   }
-
   46% {
     transform: scaleX(0.81);
     animation-timing-function: cubic-bezier(0.25, 0.25, 1);
   }
-
   100% {
     transform: scaleX(1);
   }
@@ -34,7 +30,6 @@
   0% {
     transform: translateY(9999px);
   }
-
   100% {
     transform: translateX(0);
   }
@@ -42,7 +37,17 @@
 
 @keyframes dishes {
   0% {
+    transform: translate(50px);
+  }
+  30% {
+    transform: translate(30px);
+    animation-timing-function: cubic-bezier(0.9, 0, 0.1, 1);
+  }
+  60% {
+    transform: translate(70px);
+    animation-timing-function: cubic-bezier(0.25, 0.25, 1);
   }
   100% {
+    transform: translate(0);
   }
 }

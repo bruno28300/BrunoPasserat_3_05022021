@@ -112,6 +112,18 @@
   margin: auto;
 }
 
+.starters {
+  animation: site 900ms 300ms both;
+}
+
+.dishes {
+  animation: site 900ms 600ms both;
+}
+
+.desserts {
+  animation: site 900ms 900ms both;
+}
+
 .dish-bg {
   position: relative;
   max-width: $size * 12;

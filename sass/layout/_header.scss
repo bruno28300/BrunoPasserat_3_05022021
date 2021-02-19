@@ -26,6 +26,11 @@
   background: darken($color-white, 4);
 }
 
+.header-menu {
+  max-height: 900px;
+  overflow: hidden;
+}
+
 .city {
   display: flex;
   justify-content: center;

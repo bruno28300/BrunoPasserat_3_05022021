@@ -16,6 +16,17 @@
     transform: translateY(9999px); }
   100% {
     transform: translateX(0); } }
+@keyframes dishes {
+  0% {
+    transform: translate(50px); }
+  30% {
+    transform: translate(30px);
+    animation-timing-function: cubic-bezier(0.9, 0, 0.1, 1); }
+  60% {
+    transform: translate(70px);
+    animation-timing-function: cubic-bezier(0.25, 0.25, 1); }
+  100% {
+    transform: translate(0); } }
 *,
 *::after,
 *::before {
@@ -181,6 +192,10 @@ a {
   text-align: center;
   background: whitesmoke; }
 
+.header-menu {
+  max-height: 900px;
+  overflow: hidden; }
+
 .city {
   display: flex;
   justify-content: center;
@@ -306,6 +321,15 @@ footer {
 .restaurant-wrap {
   max-width: 48rem;
   margin: auto; }
+
+.starters {
+  animation: site 900ms 300ms both; }
+
+.dishes {
+  animation: site 900ms 600ms both; }
+
+.desserts {
+  animation: site 900ms 900ms both; }
 
 .dish-bg {
   position: relative;
