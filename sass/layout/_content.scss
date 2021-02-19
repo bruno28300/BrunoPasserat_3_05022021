@@ -5,18 +5,27 @@
 
 .restaurants {
   margin-bottom: $size * 2;
+  &-heading {
+    margin-top: $size/3;
+  }
+  &-img {
+    width: 100%;
+    height: $size * 4;
+    object-fit: cover;
+    object-position: 50% 60%;
+    border-radius: $border-rad/2 $border-rad/2 0 0;
+  }
+  &-wrap {
+    margin: auto;
+    @media (min-width: 480px) {
+      max-width: $size * 12;
+    }
+  }
 }
 
 .operation ul {
   max-width: $size * 9;
   margin: auto;
-}
-
-.restaurants-wrap {
-  margin: auto;
-  @media (min-width: 480px) {
-    max-width: $size * 12;
-  }
 }
 
 .step {
@@ -65,13 +74,6 @@
   background: $color-white;
   border-radius: $border-rad/2;
   box-shadow: $size/2 $size/2 $size darken($color-white, 20);
-  & img {
-    width: 100%;
-    height: $size * 4;
-    object-fit: cover;
-    object-position: 50% 60%;
-    border-radius: $border-rad/2 $border-rad/2 0 0;
-  }
   & .tag {
     position: absolute;
     top: $size/2;
@@ -86,19 +88,22 @@
     padding: 0 $size/2;
     font-size: $font-size/3;
   }
-}
-
-.cards-wrapper {
-  height: $size * 6;
+  &-wrapper {
+    height: $size * 6;
+  }
 }
 
 .home-heart {
   position: absolute;
-  bottom: 0;
+  bottom: $size/2;
   right: $size;
   z-index: 5;
   & img {
     height: auto;
+  }
+  &:hover .empty {
+    transition: opacity 300ms ease-in-out;
+    opacity: 0;
   }
   &:hover .filled {
     transition: opacity 300ms ease-in-out;
@@ -114,11 +119,10 @@
   padding: $size;
   background: $color-white;
   border-radius: $border-rad $border-rad 0 0;
-}
-
-.restaurant-wrap {
-  max-width: $size * 12;
-  margin: auto;
+  &-wrap {
+    max-width: $size * 12;
+    margin: auto;
+  }  
 }
 
 .starters {
@@ -133,20 +137,6 @@
   animation: site 900ms 900ms both;
 }
 
-.dish-bg {
-  position: relative;
-  max-width: $size * 12;
-  background: $color-tertiary;
-  border-radius: $border-rad/2;
-  box-shadow: $size/2 $size/2 $size darken($color-white, 20);
-  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
-  &:hover {
-    i {
-      transform: rotate(360deg);
-    }
-  }
-}
-
 .fa-check {
   position: absolute;
   top: $size/2;
@@ -156,7 +146,7 @@
   color: #99e2d0;
   background: white;
   border-radius: 50%;
-  transition: transform 300ms;
+  transition: transform 500ms;
 }
 
 .dish {
@@ -167,6 +157,19 @@
   background: $color-white;
   border-radius: $border-rad/2;
   box-shadow: $size/4 $size/4 $size darken($color-white, 20);
+  &-bg {
+    position: relative;
+    max-width: $size * 12;
+    background: $color-tertiary;
+    border-radius: $border-rad/2;
+    box-shadow: $size/2 $size/2 $size darken($color-white, 20);
+    transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+    &:hover {
+      i {
+        transform: rotate(360deg);
+      }
+    }
+  }
   & h3 {
     overflow: hidden;
     text-overflow: ellipsis;

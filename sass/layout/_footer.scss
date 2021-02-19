@@ -8,11 +8,10 @@ footer {
 .footer {
   position: relative;
   top: -$size * 2;
-}
-
-.footer-sub {
-  max-width: 1170px;
-  margin: auto;
+  &-sub {
+    max-width: 1170px;
+    margin: auto;
+  }
 }
 
 .logo-bottom {

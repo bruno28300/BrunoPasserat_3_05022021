@@ -53,18 +53,16 @@ ul {
   justify-content: center;
   flex-direction: column-reverse;
   z-index: -1; }
-
-.loading .progress {
-  width: 50vw;
-  height: 3vw; }
-
-.loading .progress-bar {
-  background: linear-gradient(to right, #9356dc, #ff79da, #99e2d0);
-  height: 100%;
-  transform-origin: left;
-  transform: scaleX(0.5);
-  animation: progress-bar 3000ms 150ms both;
-  animation-fill-mode: both; }
+  .loading .progress {
+    width: 50vw;
+    height: 1vw; }
+    .loading .progress-bar {
+      background: linear-gradient(to right, #9356dc, #ff79da, #99e2d0);
+      height: 100%;
+      transform-origin: left;
+      transform: scaleX(0.5);
+      animation: progress-bar 3000ms 150ms both;
+      animation-fill-mode: both; }
 
 .main-accueil {
   animation: site 500ms 3100ms both;
@@ -84,10 +82,9 @@ body {
   line-height: 4rem;
   font-weight: 600;
   font-size: 3rem; }
-
-@media (min-width: 480px) {
-  .heading-home-sub {
-    text-align: center; } }
+  @media (min-width: 480px) {
+    .heading-home-sub {
+      text-align: center; } }
 
 .heading-menu {
   position: relative;
@@ -98,6 +95,24 @@ body {
   @media (min-width: 480px) {
     .heading-menu {
       font-size: 4rem; } }
+  .heading-menu-wrap {
+    position: relative; }
+  .heading-menu-sub {
+    position: relative;
+    margin-top: 8rem;
+    padding-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 400;
+    color: #4d4d4d;
+    text-transform: uppercase; }
+    .heading-menu-sub:after {
+      content: "";
+      position: absolute;
+      height: 0.5rem;
+      width: 4.8rem;
+      bottom: 0;
+      left: 0;
+      background: #99e2d0; }
 
 .menu-heart {
   position: absolute;
@@ -112,23 +127,6 @@ body {
   top: 0;
   left: 0;
   opacity: 0; }
-
-.heading-menu-sub {
-  position: relative;
-  margin-top: 8rem;
-  padding-bottom: 2rem;
-  font-size: 2rem;
-  font-weight: 400;
-  color: #4d4d4d;
-  text-transform: uppercase; }
-  .heading-menu-sub:after {
-    content: "";
-    position: absolute;
-    height: 0.5rem;
-    width: 4.8rem;
-    bottom: 0;
-    left: 0;
-    background: #99e2d0; }
 
 h3 {
   font-size: 1.3333333333rem; }
@@ -198,10 +196,9 @@ a {
   width: 100%;
   text-align: center;
   background: whitesmoke; }
-
-.header-menu {
-  max-height: 900px;
-  overflow: hidden; }
+  .header-menu {
+    max-height: 900px;
+    overflow: hidden; }
 
 .city {
   display: flex;
@@ -225,10 +222,9 @@ footer {
 .footer {
   position: relative;
   top: -8rem; }
-
-.footer-sub {
-  max-width: 1170px;
-  margin: auto; }
+  .footer-sub {
+    max-width: 1170px;
+    margin: auto; }
 
 .logo-bottom {
   margin-bottom: 2rem; }
@@ -239,16 +235,23 @@ footer {
 
 .restaurants {
   margin-bottom: 8rem; }
+  .restaurants-heading {
+    margin-top: 1.3333333333rem; }
+  .restaurants-img {
+    width: 100%;
+    height: 16rem;
+    object-fit: cover;
+    object-position: 50% 60%;
+    border-radius: 2rem 2rem 0 0; }
+  .restaurants-wrap {
+    margin: auto; }
+    @media (min-width: 480px) {
+      .restaurants-wrap {
+        max-width: 48rem; } }
 
 .operation ul {
   max-width: 36rem;
   margin: auto; }
-
-.restaurants-wrap {
-  margin: auto; }
-  @media (min-width: 480px) {
-    .restaurants-wrap {
-      max-width: 48rem; } }
 
 .step {
   position: relative;
@@ -291,12 +294,6 @@ footer {
   background: #fff;
   border-radius: 2rem;
   box-shadow: 2rem 2rem 4rem #cccccc; }
-  .cards img {
-    width: 100%;
-    height: 16rem;
-    object-fit: cover;
-    object-position: 50% 60%;
-    border-radius: 2rem 2rem 0 0; }
   .cards .tag {
     position: absolute;
     top: 2rem;
@@ -308,17 +305,19 @@ footer {
   .cards h3, .cards p {
     padding: 0 2rem;
     font-size: 1.3333333333rem; }
-
-.cards-wrapper {
-  height: 24rem; }
+  .cards-wrapper {
+    height: 24rem; }
 
 .home-heart {
   position: absolute;
-  bottom: 0;
+  bottom: 2rem;
   right: 4rem;
   z-index: 5; }
   .home-heart img {
     height: auto; }
+  .home-heart:hover .empty {
+    transition: opacity 300ms ease-in-out;
+    opacity: 0; }
   .home-heart:hover .filled {
     transition: opacity 300ms ease-in-out;
     opacity: 1; }
@@ -331,10 +330,9 @@ footer {
   padding: 4rem;
   background: #fff;
   border-radius: 4rem 4rem 0 0; }
-
-.restaurant-wrap {
-  max-width: 48rem;
-  margin: auto; }
+  .restaurant-wrap {
+    max-width: 48rem;
+    margin: auto; }
 
 .starters {
   animation: site 900ms 300ms both; }
@@ -345,16 +343,6 @@ footer {
 .desserts {
   animation: site 900ms 900ms both; }
 
-.dish-bg {
-  position: relative;
-  max-width: 48rem;
-  background: #99e2d0;
-  border-radius: 2rem;
-  box-shadow: 2rem 2rem 4rem #cccccc;
-  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1) 0ms; }
-  .dish-bg:hover i {
-    transform: rotate(360deg); }
-
 .fa-check {
   position: absolute;
   top: 2rem;
@@ -364,7 +352,7 @@ footer {
   color: #99e2d0;
   background: white;
   border-radius: 50%;
-  transition: transform 300ms; }
+  transition: transform 500ms; }
 
 .dish {
   position: relative;
@@ -374,6 +362,15 @@ footer {
   background: #fff;
   border-radius: 2rem;
   box-shadow: 1rem 1rem 4rem #cccccc; }
+  .dish-bg {
+    position: relative;
+    max-width: 48rem;
+    background: #99e2d0;
+    border-radius: 2rem;
+    box-shadow: 2rem 2rem 4rem #cccccc;
+    transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1) 0ms; }
+    .dish-bg:hover i {
+      transform: rotate(360deg); }
   .dish h3 {
     overflow: hidden;
     text-overflow: ellipsis; }

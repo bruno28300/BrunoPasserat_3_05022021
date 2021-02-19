@@ -24,11 +24,10 @@
   width: 100%;
   text-align: center;
   background: darken($color-white, 4);
-}
-
-.header-menu {
-  max-height: 900px;
-  overflow: hidden;
+  &-menu {
+    max-height: 900px;
+    overflow: hidden;
+  }
 }
 
 .city {

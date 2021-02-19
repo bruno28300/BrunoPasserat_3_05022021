@@ -30,25 +30,23 @@ ul {
   justify-content: center;
   flex-direction: column-reverse;
   z-index: -1;
-}
-
-.loading .progress {
-  width: 50vw;
-  height: 3vw;
-}
-
-.loading .progress-bar {
-  background: linear-gradient(
-    to right,
-    $color-primary,
-    $color-secondary,
-    $color-tertiary
-  );
-  height: 100%;
-  transform-origin: left;
-  transform: scaleX(0.5);
-  animation: progress-bar 3000ms 150ms both;
-  animation-fill-mode: both;
+  & .progress {
+    width: 50vw;
+    height: 1vw;
+    &-bar {
+      background: linear-gradient(
+        to right,
+        $color-primary,
+        $color-secondary,
+        $color-tertiary
+      );
+      height: 100%;
+      transform-origin: left;
+      transform: scaleX(0.5);
+      animation: progress-bar 3000ms 150ms both;
+      animation-fill-mode: both;
+    }
+  }
 }
 
 .main-accueil {
