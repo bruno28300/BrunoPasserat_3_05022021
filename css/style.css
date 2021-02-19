@@ -8,7 +8,7 @@
     animation-timing-function: cubic-bezier(0.9, 0, 0.1, 1); }
   46% {
     transform: scaleX(0.81);
-    animation-timing-function: cubic-bezier(0.25, 0.25, 1); }
+    animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1); }
   100% {
     transform: scaleX(1); } }
 @keyframes site {
@@ -18,13 +18,13 @@
     transform: translateX(0); } }
 @keyframes dishes {
   0% {
-    transform: translate(50px); }
+    transform: translate(10px); }
   30% {
     transform: translate(30px);
     animation-timing-function: cubic-bezier(0.9, 0, 0.1, 1); }
   60% {
     transform: translate(70px);
-    animation-timing-function: cubic-bezier(0.25, 0.25, 1); }
+    animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1); }
   100% {
     transform: translate(0); } }
 *,
@@ -81,6 +81,7 @@ body {
 
 .heading-home {
   margin-bottom: 4rem;
+  line-height: 4rem;
   font-weight: 600;
   font-size: 3rem; }
 
@@ -92,19 +93,25 @@ body {
   position: relative;
   margin-top: 4rem;
   font-family: "Shrikhand", cursive;
-  font-size: 2.4rem; }
-  .heading-menu .fa-heart {
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: block; }
-    .heading-menu .fa-heart:hover {
-      color: transparent;
-      background: #9356dc;
-      transition: background 1000ms ease-in-out; }
+  font-size: 2.4rem;
+  max-width: 48rem; }
   @media (min-width: 480px) {
     .heading-menu {
       font-size: 4rem; } }
+
+.menu-heart {
+  position: absolute;
+  top: 0;
+  right: 0; }
+  .menu-heart:hover .filled {
+    transition: opacity 300ms ease-in-out;
+    opacity: 1; }
+
+.filled {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0; }
 
 .heading-menu-sub {
   position: relative;
@@ -234,7 +241,7 @@ footer {
   margin-bottom: 8rem; }
 
 .operation ul {
-  max-width: 40rem;
+  max-width: 36rem;
   margin: auto; }
 
 .restaurants-wrap {
@@ -249,6 +256,7 @@ footer {
   align-items: center;
   height: 4rem;
   margin: 4rem auto;
+  padding: 2rem 2rem 2rem 4rem;
   font-size: 1.4285714286rem;
   font-weight: 500;
   background: #ededed;
@@ -256,7 +264,6 @@ footer {
   box-shadow: 2rem 2rem 4rem #cccccc; }
   @media (min-width: 480px) {
     .step {
-      padding: 2rem 4.8rem;
       font-size: 2rem; } }
   .step:hover {
     background: #f2eafb; }
@@ -301,13 +308,20 @@ footer {
   .cards h3, .cards p {
     padding: 0 2rem;
     font-size: 1.3333333333rem; }
-  .cards i {
-    position: absolute;
-    bottom: 1.6rem;
-    right: 2rem;
-    font-size: 2rem; }
-    .cards i:hover {
-      background: linear-gradient(to bottom, #ff79da, #9356dc); }
+
+.cards-wrapper {
+  height: 24rem; }
+
+.home-heart {
+  position: absolute;
+  bottom: 0;
+  right: 4rem;
+  z-index: 5; }
+  .home-heart img {
+    height: auto; }
+  .home-heart:hover .filled {
+    transition: opacity 300ms ease-in-out;
+    opacity: 1; }
 
 .restaurant {
   position: relative;

@@ -8,7 +8,7 @@
 }
 
 .operation ul {
-  max-width: $size * 10;
+  max-width: $size * 9;
   margin: auto;
 }
 
@@ -25,13 +25,13 @@
   align-items: center;
   height: $size;
   margin: $size auto;
+  padding: $size/2 $size/2 $size/2 $size;
   font-size: $size/2.8;
   font-weight: $font-weight + 100;
   background: darken($color-white, 7);
   border-radius: $border-rad/2;
   box-shadow: $size/2 $size/2 $size darken($color-white, 20);
   @media (min-width: 480px) {
-    padding: $size/2 $size * 1.2;
     font-size: $font-size/2;
   }
   &:hover {
@@ -86,14 +86,23 @@
     padding: 0 $size/2;
     font-size: $font-size/3;
   }
-  & i {
-    position: absolute;
-    bottom: $size * 0.4;
-    right: $size/2;
-    font-size: $font-size * 0.5;
-    &:hover {
-      background: $linear-gradient;
-    }
+}
+
+.cards-wrapper {
+  height: $size * 6;
+}
+
+.home-heart {
+  position: absolute;
+  bottom: 0;
+  right: $size;
+  z-index: 5;
+  & img {
+    height: auto;
+  }
+  &:hover .filled {
+    transition: opacity 300ms ease-in-out;
+    opacity: 1;
   }
 }
 
