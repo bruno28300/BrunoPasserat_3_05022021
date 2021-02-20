@@ -3,6 +3,9 @@ footer {
   line-height: $size;
   color: $color-white;
   background-color: darken($color-white, 70);
+  & a {
+    color: $color-white;
+  }
 }
 
 .footer {

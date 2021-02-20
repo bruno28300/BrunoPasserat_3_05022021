@@ -11,8 +11,10 @@
   &-img {
     width: 100%;
     height: $size * 4;
-    object-fit: cover;
-    object-position: 50% 60%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 50% 60%;
+       object-position: 50% 60%;
     border-radius: $border-rad/2 $border-rad/2 0 0;
   }
   &-wrap {
@@ -126,15 +128,18 @@
 }
 
 .starters {
-  animation: site 900ms 300ms both;
+  -webkit-animation: site 900ms 300ms both;
+          animation: site 900ms 300ms both;
 }
 
 .dishes {
-  animation: site 900ms 600ms both;
+  -webkit-animation: site 900ms 600ms both;
+          animation: site 900ms 600ms both;
 }
 
 .desserts {
-  animation: site 900ms 900ms both;
+  -webkit-animation: site 900ms 900ms both;
+          animation: site 900ms 900ms both;
 }
 
 .fa-check {

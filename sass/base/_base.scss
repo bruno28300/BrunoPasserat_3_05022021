@@ -24,7 +24,7 @@ ul {
 }
 
 .loading {
-  margin: $size * 10 auto;
+  margin-top: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -43,14 +43,17 @@ ul {
       height: 100%;
       transform-origin: left;
       transform: scaleX(0.5);
-      animation: progress-bar 3000ms 150ms both;
-      animation-fill-mode: both;
+      -webkit-animation: progress-bar 3000ms 150ms both;
+              animation: progress-bar 3000ms 150ms both;
+      -webkit-animation-fill-mode: both;
+              animation-fill-mode: both;
     }
   }
 }
 
 .main-accueil {
-  animation: site 500ms 3100ms both;
+  -webkit-animation: site 500ms 3000ms both;
+          animation: site 500ms 3000ms both;
   width: 100%;
   height: 100%;
   position: absolute;
